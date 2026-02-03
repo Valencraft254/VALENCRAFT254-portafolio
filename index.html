@@ -8,26 +8,36 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(135deg, #0a2cff, #0b5cff);
-            color: white;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: radial-gradient(circle at top, #111 0%, #000 60%);
+            color: #ffffff;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: auto;
-            padding: 30px;
-        }
-
-        h1, h2 {
-            color: #ffffff;
-            border-bottom: 2px solid rgba(255,255,255,0.3);
-            padding-bottom: 5px;
+            padding: 40px 20px;
         }
 
         h1 {
             text-align: center;
-            font-size: 36px;
+            font-size: 40px;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            text-align: center;
+            opacity: 0.7;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            margin-top: 50px;
+            margin-bottom: 20px;
+            border-left: 5px solid #2979ff;
+            padding-left: 15px;
+            color: #cfe2ff;
         }
 
         ul {
@@ -35,103 +45,159 @@
             padding: 0;
         }
 
-        li {
+        ul li {
             margin-bottom: 10px;
+            font-size: 17px;
         }
 
-        .card {
-            background: rgba(255,255,255,0.1);
-            border-radius: 12px;
-            padding: 15px;
-            margin-bottom: 15px;
+        /* CARDS SERVERS */
+        .servers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .server-card {
+            background: linear-gradient(145deg, #0c0c0c, #151515);
+            border-radius: 18px;
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: 0 0 20px rgba(41,121,255,0.15);
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .server-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 0 30px rgba(41,121,255,0.35);
         }
 
         .server-name {
+            font-size: 20px;
             font-weight: bold;
-            font-size: 18px;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .users {
+            font-size: 14px;
+            opacity: 0.75;
+            margin-bottom: 15px;
         }
 
         .rank {
-            color: #a8c7ff;
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            background: #2979ff;
+            color: #fff;
+            box-shadow: 0 0 10px rgba(41,121,255,0.6);
         }
 
         .note {
-            opacity: 0.8;
+            margin-top: 30px;
+            opacity: 0.6;
             font-style: italic;
+            text-align: center;
         }
 
         footer {
             text-align: center;
-            margin-top: 40px;
-            opacity: 0.8;
+            margin-top: 60px;
+            opacity: 0.6;
+            font-size: 14px;
+        }
+
+        .contact {
+            font-size: 18px;
+        }
+
+        .discord {
+            color: #2979ff;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <h1>VALENCRAFT254 – Portafolio</h1>
+    <h1>VALENCRAFT254</h1>
+    <div class="subtitle">Staff • Moderación • Minecraft & Discord</div>
 
-        <h2>👤 Usuario</h2>
-        <p>VALENCRAFT254</p>
+    <h2>👤 Usuario</h2>
+    <p>VALENCRAFT254</p>
 
-        <h2>🎮 Áreas</h2>
-        <ul>
-            <li>• Staff de servidores</li>
-            <li>• Moderación</li>
-            <li>• Minecraft / Discord</li>
-        </ul>
+    <h2>🎮 Áreas</h2>
+    <ul>
+        <li>• Staff de servidores</li>
+        <li>• Moderación</li>
+        <li>• Minecraft / Discord</li>
+    </ul>
 
-        <h2>🧠 Experiencia</h2>
-        <ul>
-            <li>• Staff Manager</li>
-            <li>• Moderador</li>
-            <li>• Soporte a usuarios</li>
-        </ul>
+    <h2>🧠 Experiencia</h2>
+    <ul>
+        <li>• Staff Manager</li>
+        <li>• Moderador</li>
+        <li>• Soporte a usuarios</li>
+    </ul>
 
-        <h2>🌐 Servidores (algunos)</h2>
+    <h2>🌐 Servidores</h2>
 
-        <div class="card">
-            <div class="server-name">Steal a Latamrot (+80k users Discord)</div>
-            <div class="rank">Rango: Manager</div>
+    <div class="servers">
+
+        <div class="server-card">
+            <div class="server-name">Steal a Latamrot</div>
+            <div class="users">+80.000 usuarios en Discord</div>
+            <span class="rank">MANAGER</span>
         </div>
 
-        <div class="card">
-            <div class="server-name">FuriaMC (+6k users Discord)</div>
-            <div class="rank">Rango: Mod</div>
+        <div class="server-card">
+            <div class="server-name">FuriaMC</div>
+            <div class="users">+6.000 usuarios en Discord</div>
+            <span class="rank">MOD</span>
         </div>
 
-        <div class="card">
+        <div class="server-card">
             <div class="server-name">Leviatancraft</div>
-            <div class="rank">Rango: Mod</div>
+            <div class="users">Servidor de Minecraft</div>
+            <span class="rank">MOD</span>
         </div>
 
-        <div class="card">
-            <div class="server-name">HoverMC (+700 users Discord)</div>
-            <div class="rank">Rango: T-Helper</div>
+        <div class="server-card">
+            <div class="server-name">HoverMC</div>
+            <div class="users">+700 usuarios en Discord</div>
+            <span class="rank">T-HELPER</span>
         </div>
 
-        <div class="card">
-            <div class="server-name">Surcraft Network (+500 users Discord)</div>
-            <div class="rank">Rango: Pre-Helper</div>
+        <div class="server-card">
+            <div class="server-name">Surcraft Network</div>
+            <div class="users">+500 usuarios en Discord</div>
+            <span class="rank">PRE-HELPER</span>
         </div>
 
-        <div class="card">
+        <div class="server-card">
             <div class="server-name">Galaxyland Network</div>
-            <div class="rank">Rango: Creador</div>
+            <div class="users">Proyecto creativo</div>
+            <span class="rank">CREADOR</span>
         </div>
-
-        <p class="note">En algunos de estos servidores ya no estoy</p>
-
-        <h2>📩 Contacto</h2>
-        <p>Discord: <strong>valencraf</strong></p>
-
-        <footer>
-            © 2026 • VALENCRAFT254
-        </footer>
 
     </div>
 
+    <div class="note">
+        En algunos de estos servidores ya no estoy activo
+    </div>
+
+    <h2>📩 Contacto</h2>
+    <p class="contact">Discord: <span class="discord">valencraf</span></p>
+
+    <footer>
+        © 2026 • VALENCRAFT254
+    </footer>
+
+</div>
+
 </body>
-  </html>
+</html>
