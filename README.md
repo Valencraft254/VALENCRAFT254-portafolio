@@ -12,4 +12,4 @@
 - Soporte a usuarios
 
 📩 Contacto:
-Discord: VALENCRAFT254
+Discord: valencraf
