@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Staff & Rangos</title>
+
+<style>
+body {
+    background: #0b0b14;
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* BASE DE RANGOS */
+.rank {
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 25px;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+/* BORDE GALAXY PARA TODOS */
+.rank::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 25px;
+    background: linear-gradient(
+        90deg,
+        #7f00ff,
+        #00c6ff,
+        #ff00cc,
+        #7f00ff
+    );
+    background-size: 300% 300%;
+    animation: galaxyBorder 6s linear infinite;
+    z-index: -1;
+}
+
+@keyframes galaxyBorder {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* COLORES DE RANGOS */
+.ceo {
+    background: black;
+}
+
+.admin {
+    background: linear-gradient(90deg, #8b0000, #ff0000);
+}
+
+.srmod {
+    background: linear-gradient(90deg, #b388ff, #7c4dff);
+}
+
+.tmod {
+    background: #00bfff;
+    color: black;
+}
+
+.headmanager {
+    background: linear-gradient(90deg, #005eff, #8a2be2);
+}
+
+.manager {
+    background: #ffd700;
+    color: black;
+}
+
+.mod {
+    background: #2ecc71;
+}
+
+.helper {
+    background: #9b59b6;
+}
+
+.fundador {
+    background: linear-gradient(90deg, #7f00ff, #00c6ff, #ff00cc);
+}
+
+.server {
+    margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>Staff & Comunidades</h1>
+
+<div class="rank ceo">CEO</div>
+<div class="rank admin">DUEÑO</div>
+<div class="rank headmanager">Head Manager</div>
+<div class="rank manager">Manager</div>
+<div class="rank srmod">SrMod (Lunar)</div>
+<div class="rank tmod">T-Mod</div>
+<div class="rank mod">MOD</div>
+<div class="rank helper">T-HELPER</div>
+<div class="rank fundador">FUNDADOR</div>
+
+<div class="server">
+    <h2>Servidores</h2>
+
+    <div class="rank">
+        Escapa del Tsunami por Superheroes  
+        <br>Rango: CEO  
+        <br>+1000 users
+    </div>
+
+    <div class="rank">
+        Jeys Community  
+        <br>Rol: Manager  
+        <br>+1000 users
+    </div>
+
+    <div class="rank">
+        Leviatancraft  
+        <br>+1000 users
+    </div>
+</div>
+
+</div>
+</body>
+</html>
