@@ -106,7 +106,7 @@ section h2 {
 .manager { background: linear-gradient(90deg,#facc15,#f59e0b); color:#000; }
 
 .admin {
-    background: linear-gradient(90deg,#0b00ff,#0b00ff,#b91c1c);
+    background: linear-gradient(90deg,#ef4444,#dc2626,#b91c1c);
     color: #fff;
 }
 
@@ -121,6 +121,19 @@ section h2 {
     0% {background-position: 0% 50%;}
     50% {background-position: 100% 50%;}
     100% {background-position: 0% 50%;}
+}
+
+.tmod {
+    background: linear-gradient(90deg,#06b6d4,#22d3ee,#06b6d4);
+    background-size: 200% 200%;
+    animation: tmodShift 4s ease infinite;
+    color:#000;
+}
+
+@keyframes tmodShift {
+    0% {background-position:0% 50%;}
+    50% {background-position:100% 50%;}
+    100% {background-position:0% 50%;}
 }
 
 .helper { background: linear-gradient(90deg,#38bdf8,#0284c7); }
@@ -191,6 +204,14 @@ footer {
     <h3>FuriaMC</h3>
     <div class="info">+6.000 usuarios en Discord</div>
     <span class="rank admin">ADMIN</span>
+</div>
+</a>
+
+<a class="server-link" href="https://discord.gg/3y5qaB65TU" target="_blank">
+<div class="server">
+    <h3>SOULCRAFT</h3>
+    <div class="info">+250 usuarios</div>
+    <span class="rank tmod">T-MOD</span>
 </div>
 </a>
 
