@@ -102,13 +102,8 @@ section h2 {
     font-size: 14px;
 }
 
-/* RANGOS */
 .manager { background: linear-gradient(90deg,#facc15,#f59e0b); color:#000; }
-
-.admin {
-    background: linear-gradient(90deg,#ef4444,#dc2626,#b91c1c);
-    color: #fff;
-}
+.admin { background: linear-gradient(90deg,#ef4444,#dc2626,#b91c1c); color:#fff; }
 
 .mod {
     background: linear-gradient(90deg, #16a34a, #22c55e, #4ade80, #16a34a);
@@ -153,6 +148,26 @@ section h2 {
     100% {background-position:0% 50%;}
 }
 
+/* ESTADOS */
+.server-status {
+    margin-top: 12px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.online {
+    border: 2px solid #22c55e;
+    color: #22c55e;
+}
+
+.offline {
+    border: 2px solid #ef4444;
+    color: #ef4444;
+}
+
 .note {
     text-align: center;
     opacity: 0.6;
@@ -191,85 +206,74 @@ footer {
 
 <div class="servers">
 
-<a class="server-link" href="https://discord.gg/robaunlatamrot" target="_blank">
 <div class="server">
-    <h3>Steal a Latamrot</h3>
-    <div class="info">+80.000 usuarios en Discord</div>
-    <span class="rank manager">HEAD MANAGER</span>
+<h3>Steal a Latamrot</h3>
+<div class="info">+80.000 usuarios en Discord</div>
+<span class="rank manager">HEAD MANAGER</span>
+<div class="server-status offline">Offline</div>
 </div>
-</a>
 
-<a class="server-link" href="https://discord.gg/GTCCAsQetJ" target="_blank">
 <div class="server">
-    <h3>FuriaMC</h3>
-    <div class="info">+6.000 usuarios en Discord</div>
-    <span class="rank admin">ADMIN</span>
+<h3>FuriaMC</h3>
+<div class="info">+6.000 usuarios en Discord</div>
+<span class="rank admin">ADMIN</span>
+<div class="server-status online">Online</div>
 </div>
-</a>
 
-<a class="server-link" href="https://discord.gg/3y5qaB65TU" target="_blank">
 <div class="server">
-    <h3>SOULCRAFT</h3>
-    <div class="info">+250 usuarios</div>
-    <span class="rank tmod">T-MOD</span>
+<h3>SOULCRAFT</h3>
+<div class="info">+250 usuarios</div>
+<span class="rank tmod">T-MOD</span>
+<div class="server-status online">Online</div>
 </div>
-</a>
 
-<a class="server-link" href="https://discord.gg/leviatancraft-network-1178385306236493824" target="_blank">
 <div class="server">
-    <h3>Leviatancraft</h3>
-    <div class="info">+1000 users</div>
-    <span class="rank mod">MOD</span>
+<h3>Leviatancraft</h3>
+<div class="info">+1000 users</div>
+<span class="rank mod">MOD</span>
+<div class="server-status offline">Offline</div>
 </div>
-</a>
 
-<a class="server-link" href="#" target="_blank">
 <div class="server">
-    <h3>HoverMC</h3>
-    <div class="info">+700 usuarios en Discord</div>
-    <span class="rank helper">T-HELPER</span>
+<h3>HoverMC</h3>
+<div class="info">+700 usuarios en Discord</div>
+<span class="rank helper">T-HELPER</span>
+<div class="server-status offline">Offline</div>
 </div>
-</a>
 
-<a class="server-link" href="#" target="_blank">
 <div class="server">
-    <h3>Surcraft Network</h3>
-    <div class="info">+500 usuarios en Discord</div>
-    <span class="rank prehelper">PRE-HELPER</span>
+<h3>Surcraft Network</h3>
+<div class="info">+500 usuarios en Discord</div>
+<span class="rank prehelper">PRE-HELPER</span>
+<div class="server-status offline">Offline</div>
 </div>
-</a>
 
-<a class="server-link" href="https://discord.gg/ASe4JvpF8D" target="_blank">
 <div class="server">
-    <h3>Galaxyland Network</h3>
-    <div class="info">Proyecto creativo</div>
-    <span class="rank dueno">DUEÑO</span>
+<h3>Galaxyland Network</h3>
+<div class="info">Proyecto creativo</div>
+<span class="rank dueno">DUEÑO</span>
+<div class="server-status offline">Offline</div>
 </div>
-</a>
 
-<a class="server-link" href="https://discord.gg/H2NwgQDSdx" target="_blank">
 <div class="server">
-    <h3>Escapa del Tsunami por Superheroes</h3>
-    <div class="info">+50 users</div>
-    <span class="rank ceo">CEO</span>
+<h3>Escapa del Tsunami por Superheroes</h3>
+<div class="info">+50 users</div>
+<span class="rank ceo">CEO</span>
+<div class="server-status online">Online</div>
 </div>
-</a>
 
-<a class="server-link" href="https://discord.gg/hTyGjWkaB8" target="_blank">
 <div class="server">
-    <h3>LatamRP</h3>
-    <div class="info">+150 users</div>
-    <span class="rank fundador">FUNDADOR</span>
+<h3>LatamRP</h3>
+<div class="info">+150 users</div>
+<span class="rank fundador">FUNDADOR</span>
+<div class="server-status offline">Offline</div>
 </div>
-</a>
 
-<a class="server-link" href="https://discord.gg/G8s6yVCmf8" target="_blank">
 <div class="server">
-    <h3>Jeys Community</h3>
-    <div class="info">+1000 users</div>
-    <span class="rank dueno">DUEÑO</span>
+<h3>Jeys Community</h3>
+<div class="info">+1000 users</div>
+<span class="rank dueno">DUEÑO</span>
 </div>
-</a>
 
 </div>
 
