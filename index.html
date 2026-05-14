@@ -20,7 +20,7 @@ body {
     color: #fff;
 }
 
-/* BOTÓN 3 BARRAS */
+/* BOTÓN MENÚ */
 .menu-btn {
     position: fixed;
     top: 20px;
@@ -35,14 +35,13 @@ body {
     background: #fff;
     margin: 6px 0;
     border-radius: 3px;
-    transition: 0.3s;
 }
 
 /* SIDEBAR */
 .sidebar {
     position: fixed;
     top: 0;
-    left: -250px;
+    left: -260px;
     width: 250px;
     height: 100%;
     background: #0f0f1f;
@@ -52,28 +51,31 @@ body {
     z-index: 1000;
 }
 
+.sidebar.active {
+    left: 0;
+}
+
 .sidebar a {
     display: block;
     padding: 15px 25px;
     color: #fff;
     text-decoration: none;
     transition: 0.3s;
+    font-size: 17px;
 }
 
 .sidebar a:hover {
     background: rgba(59,130,255,0.2);
 }
 
-.sidebar.active {
-    left: 0;
-}
-
+/* CONTENEDOR */
 .container {
     max-width: 1100px;
     margin: auto;
     padding: 40px 20px;
 }
 
+/* HEADER */
 .header {
     text-align: center;
     padding: 60px 20px;
@@ -93,12 +95,13 @@ body {
     font-size: 18px;
 }
 
+/* SECCIONES */
 section {
     margin-bottom: 70px;
 }
 
 section h2 {
-    font-size: 26px;
+    font-size: 28px;
     margin-bottom: 25px;
     border-left: 6px solid var(--azul);
     padding-left: 15px;
@@ -117,6 +120,7 @@ section h2 {
     color: #d8e4ff;
 }
 
+/* SERVIDORES */
 .servers {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -129,7 +133,7 @@ section h2 {
     padding: 25px;
     border: 1px solid var(--borde);
     box-shadow: 0 0 25px rgba(0,0,0,0.6);
-    transition: transform .3s, box-shadow .3s;
+    transition: 0.3s;
 }
 
 .server:hover {
@@ -164,20 +168,27 @@ section h2 {
 }
 
 /* RANGOS */
-.manager { background: linear-gradient(90deg,#facc15,#f59e0b); color:#000; }
-.admin { background: linear-gradient(90deg,#ef4444,#dc2626,#b91c1c); color:#fff; }
+.manager {
+    background: linear-gradient(90deg,#facc15,#f59e0b);
+    color:#000;
+}
+
+.admin {
+    background: linear-gradient(90deg,#ef4444,#dc2626,#b91c1c);
+    color:#fff;
+}
 
 .mod {
-    background: linear-gradient(90deg, #16a34a, #22c55e, #4ade80, #16a34a);
+    background: linear-gradient(90deg,#16a34a,#22c55e,#4ade80,#16a34a);
     background-size: 400% 400%;
     animation: modGreenShift 5s ease infinite;
-    color: #000;
+    color:#000;
 }
 
 @keyframes modGreenShift {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
+    0% {background-position:0% 50%;}
+    50% {background-position:100% 50%;}
+    100% {background-position:0% 50%;}
 }
 
 .tmod {
@@ -193,10 +204,21 @@ section h2 {
     100% {background-position:0% 50%;}
 }
 
-.helper { background: linear-gradient(90deg,#38bdf8,#0284c7); }
-.prehelper { background: linear-gradient(90deg,#a78bfa,#7c3aed); }
-.dueno { background: linear-gradient(90deg,#7f1d1d,#dc2626); }
-.ceo { background:#000; }
+.helper {
+    background: linear-gradient(90deg,#38bdf8,#0284c7);
+}
+
+.prehelper {
+    background: linear-gradient(90deg,#a78bfa,#7c3aed);
+}
+
+.dueno {
+    background: linear-gradient(90deg,#7f1d1d,#dc2626);
+}
+
+.ceo {
+    background:#000;
+}
 
 .fundador {
     background: linear-gradient(90deg,#7f00ff,#00c6ff,#7f00ff);
@@ -230,12 +252,7 @@ section h2 {
     color: #ef4444;
 }
 
-.note {
-    text-align: center;
-    opacity: 0.6;
-    font-style: italic;
-}
-
+/* CONTACTO */
 .contact {
     text-align: center;
     font-size: 20px;
@@ -243,10 +260,11 @@ section h2 {
 
 .contact a {
     color: var(--azul);
-    font-weight: bold;
     text-decoration: none;
+    font-weight: bold;
 }
 
+/* FOOTER */
 footer {
     margin-top: 80px;
     text-align: center;
@@ -257,26 +275,30 @@ footer {
 
 <body>
 
+<!-- BOTÓN -->
 <div class="menu-btn" onclick="toggleMenu()">
 <div></div>
 <div></div>
 <div></div>
 </div>
 
+<!-- MENÚ -->
 <div class="sidebar" id="sidebar">
-<a href="#enfoque">En qué me enfoco</a>
-<a href="#servidores">Servidores</a>
-<a href="#contacto">Contacto</a>
-<a href="https://valencraft-254-guias.vercel.app/" target="_blank">Mi Guía</a>
+<a href="#enfoque">🎯 En qué me enfoco</a>
+<a href="#experiencia">🌐 Experiencias</a>
+<a href="#contacto">📩 Contacto</a>
+<a href="https://valencraft-254-guias.vercel.app/" target="_blank">📘 Mi Guía</a>
 </div>
 
 <div class="container">
 
+<!-- HEADER -->
 <div class="header">
 <h1>VALENCRAFT254</h1>
 <p>Staff profesional • Moderación • Gestión de comunidades</p>
 </div>
 
+<!-- ENFOQUE -->
 <section id="enfoque">
 <h2>🎯 En qué me enfoco</h2>
 
@@ -285,8 +307,9 @@ Soy experto organizando servidores y equipos de staff. Tengo experiencia como He
 </div>
 </section>
 
-<section id="servidores">
-<h2>🌐 Servidores</h2>
+<!-- EXPERIENCIA -->
+<section id="experiencia">
+<h2>🌐 Experiencias</h2>
 
 <div class="servers">
 
@@ -388,12 +411,9 @@ Soy experto organizando servidores y equipos de staff. Tengo experiencia como He
 </div>
 
 </div>
-
-<div class="note">
-En algunos de estos servidores ya no estoy activo.
-</div>
 </section>
 
+<!-- CONTACTO -->
 <section id="contacto">
 <h2>📩 Contacto</h2>
 
