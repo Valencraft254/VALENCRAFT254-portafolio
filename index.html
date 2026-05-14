@@ -105,6 +105,18 @@ section h2 {
     color: #cfe0ff;
 }
 
+/* ENFOQUE */
+.focus-box {
+    background: linear-gradient(145deg, #0a0a0a, #141414);
+    border-radius: 22px;
+    padding: 30px;
+    border: 1px solid var(--borde);
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+    line-height: 1.8;
+    font-size: 17px;
+    color: #d8e4ff;
+}
+
 .servers {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -252,9 +264,9 @@ footer {
 </div>
 
 <div class="sidebar" id="sidebar">
-<a href="#">Inicio</a>
-<a href="#">Servidores</a>
-<a href="#">Contacto</a>
+<a href="#enfoque">En qué me enfoco</a>
+<a href="#servidores">Servidores</a>
+<a href="#contacto">Contacto</a>
 <a href="https://valencraft-254-guias.vercel.app/" target="_blank">Mi Guía</a>
 </div>
 
@@ -265,7 +277,15 @@ footer {
 <p>Staff profesional • Moderación • Gestión de comunidades</p>
 </div>
 
-<section>
+<section id="enfoque">
+<h2>🎯 En qué me enfoco</h2>
+
+<div class="focus-box">
+Soy experto organizando servidores y equipos de staff. Tengo experiencia como Head Manager y Community Manager. También sé configurar servidores de Minecraft y Discord, administrar comunidades y mejorar la organización de proyectos.
+</div>
+</section>
+
+<section id="servidores">
 <h2>🌐 Servidores</h2>
 
 <div class="servers">
@@ -277,6 +297,15 @@ footer {
 <span class="rank manager">HEAD MANAGER</span>
 <div class="label">Estado:</div>
 <div class="server-status offline">Offline</div>
+</div>
+
+<div class="server">
+<h3>Nexgens</h3>
+<div class="info">Servidor de comunidad</div>
+<div class="label">Rango:</div>
+<span class="rank manager">HEAD MANAGER</span>
+<div class="label">Estado:</div>
+<div class="server-status offline">Cerrado</div>
 </div>
 
 <div class="server">
@@ -299,7 +328,7 @@ footer {
 
 <div class="server">
 <h3>Leviatancraft</h3>
-<div class="info">+1000 users</div>
+<div class="info">+1.000 usuarios</div>
 <div class="label">Rango:</div>
 <span class="rank mod">MOD</span>
 <div class="label">Estado:</div>
@@ -334,8 +363,8 @@ footer {
 </div>
 
 <div class="server">
-<h3>Escapa del Tsunami por Superheroes</h3>
-<div class="info">+50 users</div>
+<h3>Escapa del Tsunami por Superhéroes</h3>
+<div class="info">+50 usuarios</div>
 <div class="label">Rango:</div>
 <span class="rank ceo">CEO</span>
 <div class="label">Estado:</div>
@@ -344,7 +373,7 @@ footer {
 
 <div class="server">
 <h3>LatamRP</h3>
-<div class="info">+150 users</div>
+<div class="info">+150 usuarios</div>
 <div class="label">Rango:</div>
 <span class="rank fundador">FUNDADOR</span>
 <div class="label">Estado:</div>
@@ -353,7 +382,7 @@ footer {
 
 <div class="server">
 <h3>Jeys Community</h3>
-<div class="info">+1000 users</div>
+<div class="info">+1.000 usuarios</div>
 <div class="label">Rango:</div>
 <span class="rank dueno">DUEÑO</span>
 </div>
@@ -361,15 +390,18 @@ footer {
 </div>
 
 <div class="note">
-En algunos de estos servidores ya no estoy activo
+En algunos de estos servidores ya no estoy activo.
 </div>
 </section>
 
-<section>
+<section id="contacto">
 <h2>📩 Contacto</h2>
+
 <div class="contact">
-Discord: <a href="https://discord.gg/BwxRZ4H4" target="_blank">valencraf</a>
+Discord:
+<a href="https://discord.gg/BwxRZ4H4" target="_blank">valencraf</a>
 </div>
+
 </section>
 
 <footer>
