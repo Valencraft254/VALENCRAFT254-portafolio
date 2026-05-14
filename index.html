@@ -6,269 +6,239 @@
 <title>VALENCRAFT254 | Staff Portfolio</title>
 
 <style>
-:root {
-    --azul: #3b82ff;
-    --borde: rgba(255,255,255,0.08);
+:root{
+    --azul:#3b82ff;
 }
 
-body {
-    margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
+body{
+    margin:0;
+    font-family:'Segoe UI',Arial,sans-serif;
     background:
-        linear-gradient(120deg, rgba(59,130,255,0.08), rgba(124,58,237,0.08)),
-        radial-gradient(circle at top, #0b0b2a 0%, #000 65%);
-    color: #fff;
+    linear-gradient(120deg, rgba(59,130,255,0.08), rgba(124,58,237,0.08)),
+    radial-gradient(circle at top, #0b0b2a 0%, #000 65%);
+    color:white;
+    overflow-x:hidden;
 }
 
-/* BOTÓN MENÚ */
-.menu-btn {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    width: 35px;
-    cursor: pointer;
-    z-index: 1001;
+/* BOTÓN */
+.menu-btn{
+    position:fixed;
+    top:20px;
+    left:20px;
+    width:35px;
+    cursor:pointer;
+    z-index:1001;
 }
 
-.menu-btn div {
-    height: 4px;
-    background: #fff;
-    margin: 6px 0;
-    border-radius: 3px;
+.menu-btn div{
+    height:4px;
+    background:white;
+    margin:6px 0;
+    border-radius:3px;
 }
 
 /* SIDEBAR */
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: -260px;
-    width: 250px;
-    height: 100%;
-    background: #0f0f1f;
-    box-shadow: 5px 0 25px rgba(0,0,0,0.6);
-    padding-top: 80px;
-    transition: 0.4s;
-    z-index: 1000;
+.sidebar{
+    position:fixed;
+    top:0;
+    left:-270px;
+    width:250px;
+    height:100%;
+    background:#0f0f1f;
+    box-shadow:5px 0 25px rgba(0,0,0,.7);
+    padding-top:80px;
+    transition:.4s;
+    z-index:1000;
 }
 
-.sidebar.active {
-    left: 0;
+.sidebar.active{
+    left:0;
 }
 
-.sidebar a {
-    display: block;
-    padding: 15px 25px;
-    color: #fff;
-    text-decoration: none;
-    transition: 0.3s;
-    font-size: 17px;
+.sidebar a{
+    display:block;
+    padding:16px 25px;
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+    font-size:17px;
 }
 
-.sidebar a:hover {
-    background: rgba(59,130,255,0.2);
+.sidebar a:hover{
+    background:rgba(59,130,255,.2);
 }
 
-/* CONTENEDOR */
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 40px 20px;
+/* CONTENIDO */
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:40px 20px;
 }
 
 /* HEADER */
-.header {
-    text-align: center;
-    padding: 60px 20px;
-    margin-bottom: 50px;
-    border-radius: 25px;
-    background: linear-gradient(135deg, rgba(59,130,255,0.15), rgba(0,0,0,0.6));
-    box-shadow: 0 0 40px rgba(59,130,255,0.25);
+.header{
+    text-align:center;
+    padding:90px 20px;
 }
 
-.header h1 {
-    font-size: 48px;
-    letter-spacing: 3px;
+.header h1{
+    font-size:60px;
+    letter-spacing:4px;
+    margin-bottom:10px;
 }
 
-.header p {
-    opacity: 0.8;
-    font-size: 18px;
+.header p{
+    font-size:22px;
+    opacity:.8;
 }
 
-/* SECCIONES */
-section {
-    margin-bottom: 70px;
+/* PÁGINAS */
+.page{
+    display:none;
+    animation:fade .4s ease;
 }
 
-section h2 {
-    font-size: 28px;
-    margin-bottom: 25px;
-    border-left: 6px solid var(--azul);
-    padding-left: 15px;
-    color: #cfe0ff;
+.page.active{
+    display:block;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 /* ENFOQUE */
-.focus-box {
-    background: linear-gradient(145deg, #0a0a0a, #141414);
-    border-radius: 22px;
-    padding: 30px;
-    border: 1px solid var(--borde);
-    box-shadow: 0 0 25px rgba(0,0,0,0.6);
-    line-height: 1.8;
-    font-size: 17px;
-    color: #d8e4ff;
+.focus{
+    text-align:center;
+    margin-top:50px;
 }
 
-/* SERVIDORES */
-.servers {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+.focus h2{
+    font-size:50px;
+    color:#60a5fa;
+    margin-bottom:25px;
 }
 
-.server {
-    background: linear-gradient(145deg, #0a0a0a, #141414);
-    border-radius: 22px;
-    padding: 25px;
-    border: 1px solid var(--borde);
-    box-shadow: 0 0 25px rgba(0,0,0,0.6);
-    transition: 0.3s;
+.focus p{
+    font-size:31px;
+    line-height:1.8;
+    max-width:900px;
+    margin:auto;
+    opacity:.93;
 }
 
-.server:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 40px rgba(59,130,255,0.35);
+/* SERVERS */
+.servers{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    margin-top:40px;
 }
 
-.server h3 {
-    font-size: 22px;
-    margin-bottom: 8px;
+.server{
+    background:linear-gradient(145deg,#0a0a0a,#141414);
+    border-radius:22px;
+    padding:25px;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.3s;
 }
 
-.server .info {
-    font-size: 14px;
-    opacity: 0.75;
-    margin-bottom: 10px;
+.server:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 35px rgba(59,130,255,.3);
 }
 
-.label {
-    font-size: 13px;
-    opacity: 0.7;
-    margin-top: 8px;
+.server h3{
+    font-size:24px;
 }
 
-.rank {
-    display: inline-block;
-    padding: 7px 16px;
-    border-radius: 25px;
-    font-weight: bold;
-    font-size: 14px;
-    margin-top: 5px;
+.info{
+    opacity:.7;
+    margin-bottom:10px;
 }
 
-/* RANGOS */
-.manager {
-    background: linear-gradient(90deg,#facc15,#f59e0b);
-    color:#000;
+.rank{
+    display:inline-block;
+    padding:8px 16px;
+    border-radius:20px;
+    font-weight:bold;
+    margin-top:8px;
 }
 
-.admin {
-    background: linear-gradient(90deg,#ef4444,#dc2626,#b91c1c);
-    color:#fff;
+.manager{
+    background:linear-gradient(90deg,#facc15,#f59e0b);
+    color:black;
 }
 
-.mod {
-    background: linear-gradient(90deg,#16a34a,#22c55e,#4ade80,#16a34a);
-    background-size: 400% 400%;
-    animation: modGreenShift 5s ease infinite;
-    color:#000;
+.admin{
+    background:linear-gradient(90deg,#ef4444,#b91c1c);
 }
 
-@keyframes modGreenShift {
-    0% {background-position:0% 50%;}
-    50% {background-position:100% 50%;}
-    100% {background-position:0% 50%;}
+.mod{
+    background:linear-gradient(90deg,#22c55e,#16a34a);
+    color:black;
 }
 
-.tmod {
-    background: linear-gradient(90deg,#06b6d4,#22d3ee,#06b6d4);
-    background-size: 200% 200%;
-    animation: tmodShift 4s ease infinite;
-    color:#000;
+.helper{
+    background:linear-gradient(90deg,#38bdf8,#0284c7);
 }
 
-@keyframes tmodShift {
-    0% {background-position:0% 50%;}
-    50% {background-position:100% 50%;}
-    100% {background-position:0% 50%;}
+.prehelper{
+    background:linear-gradient(90deg,#a78bfa,#7c3aed);
 }
 
-.helper {
-    background: linear-gradient(90deg,#38bdf8,#0284c7);
+.dueno{
+    background:linear-gradient(90deg,#7f1d1d,#dc2626);
 }
 
-.prehelper {
-    background: linear-gradient(90deg,#a78bfa,#7c3aed);
+.ceo{
+    background:black;
 }
 
-.dueno {
-    background: linear-gradient(90deg,#7f1d1d,#dc2626);
+.fundador{
+    background:linear-gradient(90deg,#7f00ff,#00c6ff);
 }
 
-.ceo {
-    background:#000;
+.status{
+    margin-top:12px;
+    font-weight:bold;
 }
 
-.fundador {
-    background: linear-gradient(90deg,#7f00ff,#00c6ff,#7f00ff);
-    background-size: 200% 200%;
-    animation: galaxy 4s ease infinite;
+.online{
+    color:#22c55e;
 }
 
-@keyframes galaxy {
-    0% {background-position:0% 50%;}
-    50% {background-position:100% 50%;}
-    100% {background-position:0% 50%;}
-}
-
-/* ESTADOS */
-.server-status {
-    margin-top: 5px;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: bold;
-    display: inline-block;
-}
-
-.online {
-    border: 2px solid #22c55e;
-    color: #22c55e;
-}
-
-.offline {
-    border: 2px solid #ef4444;
-    color: #ef4444;
+.offline{
+    color:#ef4444;
 }
 
 /* CONTACTO */
-.contact {
-    text-align: center;
-    font-size: 20px;
+.contact{
+    text-align:center;
+    margin-top:80px;
 }
 
-.contact a {
-    color: var(--azul);
-    text-decoration: none;
-    font-weight: bold;
+.contact h2{
+    font-size:45px;
+}
+
+.contact a{
+    color:#60a5fa;
+    font-size:30px;
+    text-decoration:none;
 }
 
 /* FOOTER */
-footer {
-    margin-top: 80px;
-    text-align: center;
-    opacity: 0.5;
+footer{
+    text-align:center;
+    margin-top:100px;
+    opacity:.5;
 }
 </style>
 </head>
@@ -284,145 +254,90 @@ footer {
 
 <!-- MENÚ -->
 <div class="sidebar" id="sidebar">
-<a href="#enfoque">🎯 En qué me enfoco</a>
-<a href="#experiencia">🌐 Experiencias</a>
-<a href="#contacto">📩 Contacto</a>
+<a href="#" onclick="showPage('inicio')">🏠 Inicio</a>
+<a href="#" onclick="showPage('experiencias')">🌐 Experiencias</a>
+<a href="#" onclick="showPage('contacto')">📩 Contacto</a>
 <a href="https://valencraft-254-guias.vercel.app/" target="_blank">📘 Mi Guía</a>
 </div>
 
 <div class="container">
 
-<!-- HEADER -->
 <div class="header">
 <h1>VALENCRAFT254</h1>
 <p>Staff profesional • Moderación • Gestión de comunidades</p>
 </div>
 
-<!-- ENFOQUE -->
-<section id="enfoque">
-<h2>🎯 En qué me enfoco</h2>
+<!-- INICIO -->
+<div class="page active" id="inicio">
 
-<div class="focus-box">
-Soy experto organizando servidores y equipos de staff. Tengo experiencia como Head Manager y Community Manager. También sé configurar servidores de Minecraft y Discord, administrar comunidades y mejorar la organización de proyectos.
+<div class="focus">
+<h2>¿En qué me enfoco?</h2>
+
+<p>
+Soy experto organizando servidores y equipos de staff.
+Tengo experiencia como Head Manager y Community Manager.
+También sé configurar servidores de Minecraft y Discord.
+</p>
 </div>
-</section>
 
-<!-- EXPERIENCIA -->
-<section id="experiencia">
-<h2>🌐 Experiencias</h2>
+</div>
+
+<!-- EXPERIENCIAS -->
+<div class="page" id="experiencias">
 
 <div class="servers">
 
 <div class="server">
-<h3>Steal a Latamrot</h3>
-<div class="info">+80.000 usuarios en Discord</div>
-<div class="label">Rango:</div>
+<h3>Nexgens</h3>
+<div class="info">Servidor de comunidad</div>
 <span class="rank manager">HEAD MANAGER</span>
-<div class="label">Estado:</div>
-<div class="server-status offline">Offline</div>
+<div class="status offline">Cerrado</div>
 </div>
 
 <div class="server">
-<h3>Nexgens</h3>
-<div class="info">Servidor de comunidad</div>
-<div class="label">Rango:</div>
+<h3>Steal a Latamrot</h3>
+<div class="info">+80.000 usuarios</div>
 <span class="rank manager">HEAD MANAGER</span>
-<div class="label">Estado:</div>
-<div class="server-status offline">Cerrado</div>
+<div class="status offline">Offline</div>
 </div>
 
 <div class="server">
 <h3>FuriaMC</h3>
-<div class="info">+6.000 usuarios en Discord</div>
-<div class="label">Rango:</div>
+<div class="info">+6.000 usuarios</div>
 <span class="rank admin">ADMIN</span>
-<div class="label">Estado:</div>
-<div class="server-status online">Online</div>
+<div class="status online">Online</div>
 </div>
 
 <div class="server">
 <h3>SOULCRAFT</h3>
 <div class="info">+250 usuarios</div>
-<div class="label">Rango:</div>
-<span class="rank tmod">T-MOD</span>
-<div class="label">Estado:</div>
-<div class="server-status online">Online</div>
+<span class="rank mod">T-MOD</span>
+<div class="status online">Online</div>
 </div>
 
 <div class="server">
 <h3>Leviatancraft</h3>
 <div class="info">+1.000 usuarios</div>
-<div class="label">Rango:</div>
 <span class="rank mod">MOD</span>
-<div class="label">Estado:</div>
-<div class="server-status offline">Offline</div>
-</div>
-
-<div class="server">
-<h3>HoverMC</h3>
-<div class="info">+700 usuarios en Discord</div>
-<div class="label">Rango:</div>
-<span class="rank helper">T-HELPER</span>
-<div class="label">Estado:</div>
-<div class="server-status offline">Offline</div>
-</div>
-
-<div class="server">
-<h3>Surcraft Network</h3>
-<div class="info">+500 usuarios en Discord</div>
-<div class="label">Rango:</div>
-<span class="rank prehelper">PRE-HELPER</span>
-<div class="label">Estado:</div>
-<div class="server-status offline">Offline</div>
-</div>
-
-<div class="server">
-<h3>Galaxyland Network</h3>
-<div class="info">Proyecto creativo</div>
-<div class="label">Rango:</div>
-<span class="rank dueno">DUEÑO</span>
-<div class="label">Estado:</div>
-<div class="server-status offline">Offline</div>
-</div>
-
-<div class="server">
-<h3>Escapa del Tsunami por Superhéroes</h3>
-<div class="info">+50 usuarios</div>
-<div class="label">Rango:</div>
-<span class="rank ceo">CEO</span>
-<div class="label">Estado:</div>
-<div class="server-status online">Online</div>
-</div>
-
-<div class="server">
-<h3>LatamRP</h3>
-<div class="info">+150 usuarios</div>
-<div class="label">Rango:</div>
-<span class="rank fundador">FUNDADOR</span>
-<div class="label">Estado:</div>
-<div class="server-status offline">Offline</div>
-</div>
-
-<div class="server">
-<h3>Jeys Community</h3>
-<div class="info">+1.000 usuarios</div>
-<div class="label">Rango:</div>
-<span class="rank dueno">DUEÑO</span>
+<div class="status offline">Offline</div>
 </div>
 
 </div>
-</section>
+
+</div>
 
 <!-- CONTACTO -->
-<section id="contacto">
-<h2>📩 Contacto</h2>
+<div class="page" id="contacto">
 
 <div class="contact">
-Discord:
-<a href="https://discord.gg/BwxRZ4H4" target="_blank">valencraf</a>
+<h2>Contacto</h2>
+
+<a href="https://discord.gg/BwxRZ4H4" target="_blank">
+valencraf
+</a>
 </div>
 
-</section>
+</div>
 
 <footer>
 © 2026 • VALENCRAFT254
@@ -431,8 +346,19 @@ Discord:
 </div>
 
 <script>
-function toggleMenu() {
-    document.getElementById("sidebar").classList.toggle("active");
+function toggleMenu(){
+document.getElementById("sidebar").classList.toggle("active");
+}
+
+function showPage(pageId){
+
+document.querySelectorAll(".page").forEach(page=>{
+page.classList.remove("active");
+});
+
+document.getElementById(pageId).classList.add("active");
+
+document.getElementById("sidebar").classList.remove("active");
 }
 </script>
 
